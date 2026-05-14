@@ -3,14 +3,7 @@
 	long long boi(long long a, long long b,long long c){
 		return a*b/c;
 	}
-	long long ucln (long long a, long long b){
-		while (b!=0){
-			long long c=a%b;
-			a=b;
-			b=c;
-		}
-		return a;
-	}
+
 	int main (){
 		int T; cin >> T; while (T--){
 			long long a, b,c;
@@ -21,7 +14,6 @@
 				b=c;
 			}
 			else c=0;
-			cout << boi(a,b,ucln(a,b)) <<" "<< ucln (a,b)<< endl;	
+			cout << boi(a,b,__gcd(a,b)) <<" "<< __gcd(a,b)<< endl;	
 		}
 	}
-    
